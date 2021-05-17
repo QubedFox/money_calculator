@@ -2,7 +2,7 @@ $(function () {
     const body = $('body');
 
     body.on('click', '.calculate', function() {
-        calcTotal();
+        refreshTotal();
     });
 
     body.on('click', '.increase', function(){
@@ -20,7 +20,7 @@ $(function () {
     });
 })
 
-function calcTotal(){
+function refreshTotal(){
     let total = 0;
 
     total += (parseInt($('.hundred').val() || 0) * 100);
