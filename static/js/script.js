@@ -4,6 +4,20 @@ $(function () {
     body.on('click', '.calculate', function() {
         calcTotal();
     });
+
+    body.on('click', '.increase', function(){
+        let target = $(this).closest('.row').find('.input-field');
+        increaseCount(target);
+    });
+
+    body.on('click', '.decrease', function(){
+        let target = $(this).closest('.row').find('.input-field');
+        decreaseCount(target);
+    });
+
+    body.on('click', '.multiplier', function(){
+        updateMultiplierButton()
+    });
 })
 
 function calcTotal(){
@@ -21,8 +35,29 @@ function calcTotal(){
     total += (parseInt($('.tenth').val() || 0) * 0.1);
     total += (parseInt($('.twentieth').val() || 0) * 0.05); 
 
-
-    console.log(total);
-
     $('.total').html('<p>Total = $' + total + '</p>');
+}
+
+function increaseCount(field){
+    let currentCount = $(field).val()
+    let modifier = getMultiplier()
+
+    if (isNaN(parseInt(currentCount))){
+        $(field).attr('value', parseInt(0))
+    }
+    else{
+        $(field).attr('value', parseInt(currentCount) + parseInt(modifier))
+    }
+}
+
+function decreaseCount(field){
+    let currentCount = $(field).val()
+    let modifier = getMultiplier()
+
+    if (currentCount > 0 && currentCount - modifier >= 0){
+        $(field).attr('value', parseInt(currentCount) - parseInt(modifier))
+    }
+    else if (currentCount - modifier < 0){
+        $(field).attr('value', 0)
+    }
 }

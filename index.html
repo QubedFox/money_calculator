@@ -11,6 +11,7 @@
         <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
         <!-- endregion -->
         <script type="text/javascript" src="./static/js/script.js"></script>
+        <script type="text/javascript" src="./static/js/multiplierHandler.js"></script>
     </head>
 
     <body>
@@ -21,15 +22,24 @@
                     <p>$100 x</p>
                 </div>
                 <div class="col-1">
-                    <input class='hundred' type="text" value=0>
+                    <input class='hundred form-control input-field' type="number" value=0>
                 </div>
+                <div>                
+                    <button id="100" class="increase btn btn-primary">Plus</button>
+                    <button id="100" class="decrease btn btn-primary">Minus</button>
+                </div>
+
             </div>
             <div class="row">
                 <div class="col-1">
                     <p>$50 x</p>
                 </div>
                 <div class="col-1">
-                    <input class='fifty' type="text" value=0>
+                    <input class='fifty form-control input-field' type="text" value=0>
+                </div>
+                <div>                
+                    <button class="increase btn btn-primary">Plus</button>
+                    <button class="decrease btn btn-primary">Minus</button>
                 </div>
             </div>
             <div class="row">
@@ -37,7 +47,11 @@
                     <p>$20 x</p>
                 </div>
                 <div class="col-1">
-                    <input class='twenty' type="text" value=0>
+                    <input class='twenty form-control input-field' type="text" value=0>
+                </div>
+                <div>                
+                    <button class="increase btn btn-primary">Plus</button>
+                    <button class="decrease btn btn-primary">Minus</button>
                 </div>
             </div>
             <div class="row">
@@ -45,7 +59,11 @@
                     <p>$10 x</p>
                 </div>
                 <div class="col-1">
-                    <input class='ten' type="text" value=0>
+                    <input class='ten form-control input-field' type="text" value=0>
+                </div>
+                <div>                
+                    <button class="increase btn btn-primary">Plus</button>
+                    <button class="decrease btn btn-primary">Minus</button>
                 </div>
             </div>
             <div class="row">
@@ -53,7 +71,11 @@
                     <p>$2 x</p>
                 </div>
                 <div class="col-1">
-                    <input class='two' type="text" value=0>
+                    <input class='two form-control input-field' type="text" value=0>
+                </div>
+                <div>                
+                    <button class="increase btn btn-primary">Plus</button>
+                    <button class="decrease btn btn-primary">Minus</button>
                 </div>
             </div>
             <div class="row">
@@ -61,7 +83,11 @@
                     <p>$1 x</p>
                 </div>
                 <div class="col-1">
-                    <input class='one' type="text" value=0>
+                    <input class='one form-control input-field' type="text" value=0>
+                </div>
+                <div>                
+                    <button class="increase btn btn-primary">Plus</button>
+                    <button class="decrease btn btn-primary">Minus</button>
                 </div>
             </div>
             <div class="row">
@@ -69,7 +95,11 @@
                     <p>$0.5 x</p>
                 </div>
                 <div class="col-1">
-                    <input class='half'type="text" value=0>
+                    <input class='half form-control input-field'type="text" value=0>
+                </div>
+                <div>                
+                    <button class="increase btn btn-primary">Plus</button>
+                    <button class="decrease btn btn-primary">Minus</button>
                 </div>
             </div>
             <div class="row">
@@ -77,7 +107,11 @@
                     <p>$0.2 x</p>
                 </div>
                 <div class="col-1">
-                    <input class='fifth' type="text" value=0>
+                    <input class='fifth form-control input-field' type="text" value=0>
+                </div>
+                <div>                
+                    <button class="increase btn btn-primary">Plus</button>
+                    <button class="decrease btn btn-primary">Minus</button>
                 </div>
             </div>
             <div class="row">
@@ -85,7 +119,11 @@
                     <p>$0.1 x</p>
                 </div>
                 <div class="col-1">
-                    <input class='tenth' type="text" value=0>
+                    <input class='tenth form-control input-field' type="text" value=0>
+                </div>
+                <div>                
+                    <button class="increase btn btn-primary">Plus</button>
+                    <button class="decrease btn btn-primary">Minus</button>
                 </div>
             </div>
             <div class="row">
@@ -93,7 +131,11 @@
                     <p>$0.05 x</p>
                 </div>
                 <div class="col-1">
-                    <input class='twentieth' type="text" value=0>
+                    <input class='twentieth form-control input-field' type="text" value=0>
+                </div>
+                <div>                
+                    <button class="increase btn btn-primary">Plus</button>
+                    <button class="decrease btn btn-primary">Minus</button>
                 </div>
             </div>
             <div class="row">
@@ -102,6 +144,9 @@
                 </div>
                 <div class='total'>
                     <p>Total</p>
+                </div>
+                <div>
+                    <button class="btn btn-secondary multiplier">x1</button>
                 </div>
             </div>
         
