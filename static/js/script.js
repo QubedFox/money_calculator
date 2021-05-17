@@ -43,10 +43,10 @@ function increaseCount(field){
     let modifier = getMultiplier()
 
     if (isNaN(parseInt(currentCount))){
-        $(field).attr('value', parseInt(0))
+        $(field).val(parseInt(modifier))
     }
     else{
-        $(field).attr('value', parseInt(currentCount) + parseInt(modifier))
+        $(field).val(parseInt(currentCount) + parseInt(modifier))
     }
 }
 
@@ -55,9 +55,9 @@ function decreaseCount(field){
     let modifier = getMultiplier()
 
     if (currentCount > 0 && currentCount - modifier >= 0){
-        $(field).attr('value', parseInt(currentCount) - parseInt(modifier))
+        $(field).val(parseInt(currentCount) - parseInt(modifier))
     }
     else if (currentCount - modifier < 0){
-        $(field).attr('value', 0)
+        $(field).val( 0)
     }
 }

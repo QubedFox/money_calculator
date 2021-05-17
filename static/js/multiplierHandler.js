@@ -9,10 +9,9 @@ function getMultiplier(){
 function updateMultiplierButton(){
     let currentMultiplier = $('.multiplier').text()
     let index = 0
-    
+
     while (index <= MAX_INDEX){
         if (MULTIPLES[index] == currentMultiplier){
-            console.log(MULTIPLES[index], currentMultiplier, index, MAX_INDEX)
             if (index == MAX_INDEX){
                 $('.multiplier').text(MULTIPLES[0])
                 multiplier = MULTIPLES[0].substring(1)
