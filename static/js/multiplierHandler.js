@@ -1,26 +1,23 @@
-var multiplier = 1
 const MULTIPLES = ['x1', 'x5', 'x10', 'x25', 'x100']
+var currentSelection = MULTIPLES[0]
 const MAX_INDEX = MULTIPLES.length - 1
 
 function getMultiplier(){
-    return multiplier
+    return currentSelection.substring(1)
 }
 
-function updateMultiplierButton(){
-    let currentMultiplier = $('.multiplier').text()
+function cycleMultiplier(){
     let index = 0
 
     while (index <= MAX_INDEX){
-        if (MULTIPLES[index] == currentMultiplier){
+        if (MULTIPLES[index] == currentSelection){
             if (index == MAX_INDEX){
-                $('.multiplier').text(MULTIPLES[0])
-                multiplier = MULTIPLES[0].substring(1)
-                break
+                currentSelection = MULTIPLES[0]
+                return currentSelection
             }
             else{
-                $('.multiplier').text(MULTIPLES[index + 1])
-                multiplier = MULTIPLES[index + 1].substring(1)
-                break
+                currentSelection = MULTIPLES[index + 1]
+                return currentSelection
             }
         }
         else{
