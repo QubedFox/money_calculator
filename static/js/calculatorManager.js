@@ -2,6 +2,7 @@
 window.onload = function() {
     //Fills the currency dropdown menu
     fillCurrencyDropDown();
+    addEmptyFormPlaceholder();
 };
 
 $(function () {
@@ -19,6 +20,7 @@ $(function () {
         let target = $(this).closest('.row').find('.input-field');
         //Increases input field
         increaseCount(target);
+        refreshTotal($('#currencyDropDown').val());
     });
 
     //Clicking the decrease button on a denomination
@@ -27,6 +29,7 @@ $(function () {
         let target = $(this).closest('.row').find('.input-field');
         //decreases closest input field
         decreaseCount(target);
+        refreshTotal($('#currencyDropDown').val());
     });
 
     //Clicking the multiplier button

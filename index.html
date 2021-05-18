@@ -4,24 +4,33 @@
     <head>
         <meta charset="UTF-8">
         <title>Money Calculator</title>
+
+        <!-- region Stylesheets-->
         <link href="./lib/fontawesome/all.css" rel="stylesheet">
-        <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" >       
+        <link href="./lib/bootstrap/css/bootstrap.css" rel="stylesheet" >
+        <link type="text/css" href="./static/css/style.css" rel="stylesheet">  
+        <!-- endregion -->
+         
         <!-- region Libraries -->
         <script src="./lib/jquery/jquery-3.6.0.min.js"></script>
-        <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="./lib/bootstrap/js/bootstrap.bundle.js"></script>
         <!-- endregion -->
+
+        <!-- region Custom Scripts -->
         <script type="text/javascript" src="./static/js/calculatorManager.js"></script>
         <script type="text/javascript" src="./static/js/multiplierHandler.js"></script>
         <script type="text/javascript" src="./static/js/moneyHandler.js"></script>
         <script type="text/javascript" src="./static/js/domHandler.js"></script>
+        <!-- endregion -->
     </head>
 
     <body>
         <h1 class="display-4 text-center mt-3">Money Calculator</h1>
+
         <div class="justify-content-center">
 
             <div class="container-fluid card col-3 mt-3">
-                <select class="mt-2 mb-2"name="currency" id="currencyDropDown">
+                <select class="mt-2 mb-2 col-6 form-control" name="currency" id="currencyDropDown">
 
                 </select>
             </div>
@@ -31,20 +40,22 @@
             </div>
 
             <div class="container-fluid card col-3 mt-3">
-                <div class="row">
-                    <div>
+                <div class="row justify-content-center mt-2 mb-2">
+                    <!-- <div>
                         <button class="btn btn-success calculate">Calculate</button>
+                    </div> -->
+                    <div class='input-group col-6   '>
+                        <span class="input-group-text" id="basic-addon1">Total</span>
+                        <input type="text" class="form-control total" readonly>
                     </div>
-                    <div class='total'>
-                        <p>Total</p>
-                    </div>
-                    <div>
-                        <button class="btn btn-secondary multiplier">x1</button>
+                    <div class="col-3">
+                        <button class="btn btn-secondary multiplier col-10">x1</button>
                     </div>
                 </div>
             </div>
 
         </div>
+
     </body>
 </html>
 

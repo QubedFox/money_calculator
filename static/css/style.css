@@ -1,0 +1,27 @@
+body {
+    background-color:black;
+}
+
+.card {
+    background-color: darkslategrey;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+.denomination-text {
+    height: 35px;
+    line-height: 35px;
+}
+
+#currencyDropDown {
+    left: 50%;
+    right: auto;
+    text-align: center;
+    transform: translate(-50%, 0);
+}

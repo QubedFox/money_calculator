@@ -30,6 +30,7 @@ const currencies = [
             ['$5', 5.00, 'five-dollars'],
             ['$2', 2.00, 'two-dollars'],
             ['$1', 1.00, 'one-dollar'],
+            ['100¢', 1.00, 'hundred-cents'],
             ['50¢', 0.50, 'fifty-cents'],
             ['25¢', 0.25, 'twenty-five-cents'],
             ['10¢', 0.10, 'ten-cents'],
@@ -79,4 +80,14 @@ function getCurrencyDescriptions(){
     }
 
     return output
+}
+
+function getCurrencySymbol(currency){
+    let index = 0
+
+    while (currencies[index].acronym != currency && index < currencies.length){
+        index += 1
+    }
+    
+    return currencies[index].symbol
 }
