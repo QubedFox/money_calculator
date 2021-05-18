@@ -13,9 +13,39 @@ const AUD = [
 ]
 
 function getStringDenominations(currency){
+    let output = []
 
+    switch(currency){
+        case 'AUD':
+            for (i = 0; i < AUD.length; i++){
+                output.push(AUD[i][0])
+            }
+            return output
+    }
 }
 
 function getFloatDenominations(currency){
-    
+    let output = []
+
+    switch(currency){
+        case 'AUD':
+            for (i = 0; i < AUD.length; i++){
+                output.push(AUD[i][1])
+            }
+            return output
+    }
+}
+
+function getDenominations(currency){
+    let output = []
+
+    switch(currency){
+        case 'AUD':
+            for (i = 0; i < AUD.length; i++){
+                for (j = 0; j < 2; j++){
+                    output.push(AUD[i][j])
+                }
+            }
+            return output
+    }
 }
