@@ -1,5 +1,5 @@
 const currencies = [
-    AUD_TEST = {
+    AUD = {
         country : 'Australia',
         acronym : 'AUD',
         symbol : '$',
@@ -18,7 +18,7 @@ const currencies = [
         ]
     },
 
-    USD_TEST = {
+    USD = {
         country : 'United States',
         acronym : 'USD',
         symbol : '$',
@@ -39,7 +39,7 @@ const currencies = [
         ]
     },
 
-    GBP_TEST = {
+    GBP = {
         country : 'United Kingdom',
         acronym : 'GBP',
         symbol : '£',
@@ -54,6 +54,49 @@ const currencies = [
             ['5p', 0.05, 'five-pence'],
             ['2p', 0.02, 'two-pence'],
             ['1p', 0.01, 'one-pence']
+        ]
+    },
+
+    EUR = {
+        country : 'Europe',
+        acronym : 'EUR',
+        symbol : '€',
+        denominations : [
+            ['€500', 500.00, 'five-hundred-euros'],
+            ['€200', 200.00, 'two-hundred-euros'],
+            ['€100', 100.00, 'hundred-euros'],
+            ['€50', 50.00, 'fifty-euros'],
+            ['€20', 20.00, 'twenty-euros'],
+            ['€10', 10.00, 'ten-euros'],
+            ['€5', 5.00, 'five-euros'],
+            ['€2', 2.00, 'two-euros'],
+            ['€1', 1.00, 'one-euros'],
+            ['50¢', 0.50, 'fifty-cents'],
+            ['20¢', 0.20, 'twenty-cents'],
+            ['10¢', 0.10, 'ten-cents'],
+            ['5¢', 0.05, 'five-cents'],
+            ['2¢', 0.02, 'two-cents'],
+            ['1¢', 0.01, 'one-cent']
+        ]
+    },
+
+    CAD = {
+        country : 'Canada',
+        acronym : 'CAD',
+        symbol : '$',
+        denominations : [
+            ['$100', 100.00, 'hundred-dollars'],
+            ['$50', 50.00, 'fifty-dollars'],
+            ['$20', 20.00, 'twenty-dollars'],
+            ['$10', 10.00, 'ten-dollars'],
+            ['$5', 5.00, 'five-dollars'],
+            ['$2', 2.00, 'two-dollars'],
+            ['$1', 1.00, 'one-dollar'],
+            ['50¢', 0.50, 'fifty-cents'],
+            ['25¢', 0.25, 'twenty-five-cents'],
+            ['10¢', 0.10, 'ten-cents'],
+            ['5¢', 0.05, 'five-cents']
+            ['1¢', 0.01, 'one-cent']
         ]
     }
 ]
