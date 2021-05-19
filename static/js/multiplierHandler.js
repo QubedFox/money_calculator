@@ -25,3 +25,23 @@ function cycleMultiplier(){
         }
     }
 }
+
+function cycleMultiplierBackwards(){
+    let index = MAX_INDEX
+
+    while (index >= 0){
+        if (MULTIPLES[index] == currentSelection){
+            if (index == 0){
+                currentSelection = MULTIPLES[MAX_INDEX]
+                return currentSelection
+            }
+            else{
+                currentSelection = MULTIPLES[index - 1]
+                return currentSelection
+            }
+        }
+        else{
+            index -= 1
+        }
+    }
+}

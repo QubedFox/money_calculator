@@ -38,6 +38,13 @@ $(function () {
         updateMultiplierButton(cycleMultiplier())
     });
 
+    //Clicking the multiplier button
+    body.on('contextmenu', '.multiplier', function(e){
+        //Updates the multiplier button text with the return from cycling to the next multiplier
+        e.preventDefault()
+        updateMultiplierButton(cycleMultiplierBackwards())
+    });
+
     body.on('click', '.clear', function(){
         clearTotal($('#currencyDropDown').val());
     })
