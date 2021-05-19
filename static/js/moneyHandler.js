@@ -95,7 +95,7 @@ const currencies = [
             ['50¢', 0.50, 'fifty-cents'],
             ['25¢', 0.25, 'twenty-five-cents'],
             ['10¢', 0.10, 'ten-cents'],
-            ['5¢', 0.05, 'five-cents']
+            ['5¢', 0.05, 'five-cents'],
             ['1¢', 0.01, 'one-cent']
         ]
     }
