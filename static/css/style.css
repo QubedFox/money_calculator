@@ -16,7 +16,7 @@ body {
 }
 
 .input-form{
-    height: fit-content;
+    overflow: auto;
 }
 
 .denomination-label {
