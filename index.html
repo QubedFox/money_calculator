@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
+        <meta  name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Money Calculator</title>
 
         <!-- region Stylesheets-->
         <link href="./lib/fontawesome/all.css" rel="stylesheet">
         <link href="./lib/bootstrap/css/bootstrap.css" rel="stylesheet" >
-        <link type="text/css" href="./static/css/style.css" rel="stylesheet">  
+        <link type="text/css" href="./static/css/style.css" rel="stylesheet">
         <!-- endregion -->
          
         <!-- region Libraries -->
@@ -25,31 +25,31 @@
     </head>
 
     <body>
-        <h1 class="display-4 text-center mt-3">Money Calculator</h1>
+        <div class="header">
+            <h1 class="display-4">Money Calculator</h1>
+            <p class="lead">Programmed and Designed by Nicholas Taplin</p>
+        </div>
 
-        <div class="justify-content-center">
+        <div class="container-fluid">
 
-            <div class="container-fluid card col-3 mt-3">
-                <select class="mt-2 mb-2 col-6 form-control" name="currency" id="currencyDropDown">
-
+            <div class="card form-control text-center">
+                <select class="form-select mt-1 mb-1" name="currency" id="currencyDropDown">
                 </select>
             </div>
 
-            <div class="container-fluid card input-form col-3 mt-3" style="width: 50%;">
+            <div class="card input-form form-control container-fluid overflow-auto">
                 
             </div>
 
-            <div class="container-fluid card col-3 mt-3">
-                <div class="row justify-content-center mt-2 mb-2">
-                    <!-- <div>
-                        <button class="btn btn-success calculate">Calculate</button>
-                    </div> -->
-                    <div class='input-group col-6   '>
-                        <span class="input-group-text" id="basic-addon1">Total</span>
+            <div class="card form-control text-center">
+                <div class="btn-toolbar mt-1 mb-1" role="toolbar">
+                    <div class='input-group me-2'>
+                        <span class="input-group-text total-label" id="basic-addon1">Total</span>
                         <input type="text" class="form-control total" readonly>
                     </div>
-                    <div class="col-3">
-                        <button class="btn btn-secondary multiplier col-10">x1</button>
+                    <div class="btn-group">
+                        <button class="btn btn-secondary multiplier">x1</button>
+                        <button class="btn btn-danger clear"><i class="fas fa-trash"></i></button>
                     </div>
                 </div>
             </div>

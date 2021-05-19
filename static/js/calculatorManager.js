@@ -17,7 +17,7 @@ $(function () {
     //Clicking the increase button on a denomination
     body.on('click', '.increase', function(){
         //Finds closest input field
-        let target = $(this).closest('.row').find('.input-field');
+        let target = $(this).closest('.btn-toolbar').find('.input-field');
         //Increases input field
         increaseCount(target);
         refreshTotal($('#currencyDropDown').val());
@@ -26,7 +26,7 @@ $(function () {
     //Clicking the decrease button on a denomination
     body.on('click', '.decrease', function(){
         //Finds closest input field
-        let target = $(this).closest('.row').find('.input-field');
+        let target = $(this).closest('.btn-toolbar').find('.input-field');
         //decreases closest input field
         decreaseCount(target);
         refreshTotal($('#currencyDropDown').val());
@@ -38,6 +38,10 @@ $(function () {
         updateMultiplierButton(cycleMultiplier())
     });
 
+    body.on('click', '.clear', function(){
+        clearTotal($('#currencyDropDown').val());
+    })
+
     //Selecting a new item in currency dropdown menu
     $('#currencyDropDown').change(function() {
         //Adds denomination input fields and buttons
@@ -48,6 +52,6 @@ $(function () {
             addEmptyFormPlaceholder();
         }
         //Clears the total
-        clearTotal();
+        clearTotal($('#currencyDropDown').val());
     });
 })

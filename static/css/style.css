@@ -1,27 +1,32 @@
 body {
-    background-color:black;
+    background-color: #007FFF;
+}
+
+.header {
+    padding: 1px;
+    padding-top: 5px;
+    text-align: center;
+    background: white;
 }
 
 .card {
-    background-color: darkslategrey;
+    width: 26rem;
+    margin: 10px auto;
+    float: none;
 }
 
-h1 {
-    color: white;
+.input-form{
+    height: fit-content;
 }
 
-p {
-    color: white;
+.denomination-label {
+    width: 4rem;
 }
 
-.denomination-text {
-    height: 35px;
-    line-height: 35px;
+.total-label {
+    width: 4rem;
 }
 
-#currencyDropDown {
-    left: 50%;
-    right: auto;
-    text-align: center;
-    transform: translate(-50%, 0);
+.multiplier {
+    width: 4rem;
 }
