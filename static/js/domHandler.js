@@ -4,7 +4,7 @@ function addDenominations(currency){
     let html = ''
 
     for (i = 0; i < denominations.length; i++){     
-        html += '<div class="input-group mb-3 justify-content-center">'
+        html += '<div class="input-group mb-2 mt-2 justify-content-center">'
         html += '   <span class="input-group-text denomination-label justify-content-center">'+denominations[i][0]+'</span>'
         html += '   <input type="number" class="form-control input-field '+denominations[i][2]+'" value="0">'
         html += '   <button class="btn btn-primary increase" id="'+denominations[i][2]+' " type="button"><i class="fas fa-plus"></i></button>'
