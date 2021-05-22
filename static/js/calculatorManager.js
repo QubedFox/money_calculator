@@ -50,6 +50,7 @@ $(function () {
 
     body.on('click', '.clear', function(){
         clearTotal($('#currencyDropDown').val());
+        refreshDenominationTotal($('#currencyDropDown').val())
     })
 
     //Selecting a new item in currency dropdown menu
