@@ -7,12 +7,33 @@ function addDenominations(currency){
         html += '<div class="input-group mb-2 mt-2 justify-content-center">'
         html += '   <span class="input-group-text denomination-label justify-content-center">'+denominations[i][0]+'</span>'
         html += '   <input type="number" class="form-control input-field '+denominations[i][2]+'" value="0">'
+        html += '   <input type="text" class="form-control denomination-total denomination-total-'+denominations[i][2]+'" value="0" readonly>'
         html += '   <button class="btn btn-primary increase" id="'+denominations[i][2]+' " type="button"><i class="fas fa-plus"></i></button>'
         html += '   <button class="btn btn-primary decrease" id="'+denominations[i][2]+' " type="button"><i class="fas fa-minus"></i></button>'
         html += '</div>'
     }
     $('.input-form').html(html);
+}
+function refreshDenominationTotal(currency){
+    let denominations = getDenominations(currency)
 
+    for (i = 0; i < denominations.length; i++){
+        let total = 0.00
+        total += (parseInt($('.' + denominations[i][2]).val() || 0) * parseFloat(denominations[i][1]))
+        editDenominationTotal(denominations[i][2], getCurrencySymbol(currency) + total.toFixed(2))
+    }
+}
+
+function clearDenominationTotals(currency){
+    let denominations = getDenominations(currency)
+
+    for (i = 0; i < denominations.length; i++){
+        editDenominationTotal(denominations[i][2], getCurrencySymbol(currency) + 0.00.toFixed(2))
+    }
+}
+
+function editDenominationTotal(target, value) {
+    $('.denomination-total-' + target).val(value)
 }
 
 function refreshTotal(currency){

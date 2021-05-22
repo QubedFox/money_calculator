@@ -21,6 +21,7 @@ $(function () {
         //Increases input field
         increaseCount(target);
         refreshTotal($('#currencyDropDown').val());
+        refreshDenominationTotal($('#currencyDropDown').val())
     });
 
     //Clicking the decrease button on a denomination
@@ -30,6 +31,7 @@ $(function () {
         //decreases closest input field
         decreaseCount(target);
         refreshTotal($('#currencyDropDown').val());
+        refreshDenominationTotal($('#currencyDropDown').val())
     });
 
     //Clicking the multiplier button
@@ -60,5 +62,6 @@ $(function () {
         }
         //Clears the total
         clearTotal($('#currencyDropDown').val());
+        clearDenominationTotals($('#currencyDropDown').val())
     });
 })

@@ -2,6 +2,12 @@ body {
     background-color: #007FFF;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .header {
     padding: 1px;
     padding-top: 5px;
@@ -15,23 +21,18 @@ body {
     float: none;
 }
 
-.settings {
-    position: absolute;
-    right: 2.5rem;
-    top: 2.5rem;
-}
-
 .title {
     text-align: center;
 }
 
 .denomination-label {
-    width: 4rem;
+    width: 5rem;
     text-align: center;
 }
 
 .total-label {
-    width: 4rem;
+    width: 5rem;
+    text-align: center;
 }
 
 .multiplier {
@@ -39,10 +40,9 @@ body {
 }
 
 .input-field {
-    max-width: 100%;
+    max-width: 7rem;
 }
 
-
-/* Dead Zone
-
-*/
+.denomination-total {
+    max-width: 7rem;
+}

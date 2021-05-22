@@ -98,6 +98,24 @@ const currencies = [
             ['5¢', 0.05, 'five-cents'],
             ['1¢', 0.01, 'one-cent']
         ]
+    },
+
+    YEN = {
+        country: 'Japan',
+        acronym: 'YEN',
+        symbol: '¥',
+        denominations : [
+            ['¥10,000', 10000.00, 'ten-thousound-yen'],
+            ['¥5,000', 5000.00, 'five-thousand-yen'],
+            ['¥2,000', 2000.00, 'two-thousand-yen'],
+            ['¥1,000', 1000.00, 'thousand-yen'],
+            ['¥500', 500.00, 'five-hundred-yen'],
+            ['¥100', 100.00, 'hundred-yen'],
+            ['¥50', 50.00, 'fifty-yen'],
+            ['¥10', 10.00, 'ten-yen'],
+            ['¥5', 5.00, 'five-yen'],
+            ['¥1', 1.00, 'one-yen']
+        ]
     }
 ]
 
