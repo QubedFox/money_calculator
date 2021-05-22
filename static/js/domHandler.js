@@ -54,6 +54,11 @@ function clearTotal(currency){
     clearInputFields()
 }
 
+function clearTotalHard() {
+    editTotal( 0.00.toFixed(2))
+    clearInputFields()
+}
+
 function clearInputFields(){
     $('.input-field').val(0)
 }

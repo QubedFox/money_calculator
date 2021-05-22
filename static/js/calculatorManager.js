@@ -3,6 +3,7 @@ window.onload = function() {
     //Fills the currency dropdown menu
     fillCurrencyDropDown();
     addEmptyFormPlaceholder();
+    clearTotalHard()
 };
 
 $(function () {
@@ -59,6 +60,7 @@ $(function () {
         }
         else{
             addEmptyFormPlaceholder();
+            clearTotalHard()
         }
         //Clears the total
         clearTotal($('#currencyDropDown').val());
