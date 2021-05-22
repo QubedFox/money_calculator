@@ -5,6 +5,7 @@ body {
 .header {
     padding: 1px;
     padding-top: 5px;
+    width: 100vw;
     background: white;
 }
 
