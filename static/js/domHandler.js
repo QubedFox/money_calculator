@@ -4,15 +4,11 @@ function addDenominations(currency){
     let html = ''
 
     for (i = 0; i < denominations.length; i++){     
-        html += '<div class="btn-toolbar justify-content-center mb-1 mt-1" role="toolbar">'
-        html += '   <div class="input-group me-4">'
-        html += '       <div class="input-group-text justify-content-center denomination-label" id="btnGroupAddon">' + denominations[i][0] + '</div>'
-        html += '       <input type="number" class="' + denominations[i][2] + ' form-control input-field input-group" aria-describedby="btnGroupAddon" value="0">'
-        html += '   </div>'
-        html += '   <div class="btn-group" role="group">'
-        html += '       <button type="button" id="' + denominations[i][2] + '" class="btn btn-primary increase"><i class="fas fa-plus"></i></button>'
-        html += '       <button type="button" id="' + denominations[i][2] + '" class="btn btn-primary decrease"><i class="fas fa-minus"></i></button>'
-        html += '   </div>'
+        html += '<div class="input-group mb-3 justify-content-center">'
+        html += '   <span class="input-group-text denomination-label justify-content-center">'+denominations[i][0]+'</span>'
+        html += '   <input type="number" class="form-control input-field '+denominations[i][2]+'" value="0">'
+        html += '   <button class="btn btn-primary increase" id="'+denominations[i][2]+' " type="button"><i class="fas fa-plus"></i></button>'
+        html += '   <button class="btn btn-primary decrease" id="'+denominations[i][2]+' " type="button"><i class="fas fa-minus"></i></button>'
         html += '</div>'
     }
     $('.input-form').html(html);

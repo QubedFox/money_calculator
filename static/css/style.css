@@ -10,7 +10,7 @@ body {
 }
 
 .card {
-    width: 26rem;
+    max-width: 26rem;
     margin: 10px auto;
     float: none;
 }
@@ -27,6 +27,7 @@ body {
 
 .denomination-label {
     width: 4rem;
+    text-align: center;
 }
 
 .total-label {
@@ -35,6 +36,10 @@ body {
 
 .multiplier {
     width: 4rem;
+}
+
+.input-field {
+    max-width: 100%;
 }
 
 

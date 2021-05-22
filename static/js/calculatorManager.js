@@ -17,7 +17,7 @@ $(function () {
     //Clicking the increase button on a denomination
     body.on('click', '.increase', function(){
         //Finds closest input field
-        let target = $(this).closest('.btn-toolbar').find('.input-field');
+        let target = $(this).closest('.input-group').find('.input-field');
         //Increases input field
         increaseCount(target);
         refreshTotal($('#currencyDropDown').val());
@@ -26,7 +26,7 @@ $(function () {
     //Clicking the decrease button on a denomination
     body.on('click', '.decrease', function(){
         //Finds closest input field
-        let target = $(this).closest('.btn-toolbar').find('.input-field');
+        let target = $(this).closest('.input-group').find('.input-field');
         //decreases closest input field
         decreaseCount(target);
         refreshTotal($('#currencyDropDown').val());
