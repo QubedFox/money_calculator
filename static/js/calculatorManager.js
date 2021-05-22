@@ -1,52 +1,50 @@
 //On the webpage loading up
 window.onload = function() {
     //Fills the currency dropdown menu
-    fillCurrencyDropDown();
-    addEmptyFormPlaceholder();
+    fillCurrencyDropDown()
+    addEmptyFormPlaceholder()
     clearTotalHard()
 };
 
 $(function () {
     const body = $('body');
-
-    //Clicking the calcuate button
-    body.on('click', '.calculate', function() {
-        //Updates the total
-        refreshTotal($('#currencyDropDown').val());
-    });
+    
+    body.on('keyup', '.input-field', function() {
+        refreshTotal($('#currencyDropDown').val())
+    })
 
     //Clicking the increase button on a denomination
     body.on('click', '.increase', function(){
         //Finds closest input field
-        let target = $(this).closest('.input-group').find('.input-field');
+        let target = $(this).closest('.input-group').find('.input-field')
         //Increases input field
-        increaseCount(target);
-        refreshTotal($('#currencyDropDown').val());
+        increaseCount(target)
+        refreshTotal($('#currencyDropDown').val())
         refreshDenominationTotal($('#currencyDropDown').val())
-    });
+    })
 
     //Clicking the decrease button on a denomination
     body.on('click', '.decrease', function(){
         //Finds closest input field
-        let target = $(this).closest('.input-group').find('.input-field');
+        let target = $(this).closest('.input-group').find('.input-field')
         //decreases closest input field
-        decreaseCount(target);
-        refreshTotal($('#currencyDropDown').val());
+        decreaseCount(target)
+        refreshTotal($('#currencyDropDown').val())
         refreshDenominationTotal($('#currencyDropDown').val())
-    });
+    })
 
     //Clicking the multiplier button
     body.on('click', '.multiplier', function(){
         //Updates the multiplier button text with the return from cycling to the next multiplier
         updateMultiplierButton(cycleMultiplier())
-    });
+    })
 
     //Clicking the multiplier button
     body.on('contextmenu', '.multiplier', function(e){
         //Updates the multiplier button text with the return from cycling to the next multiplier
         e.preventDefault()
         updateMultiplierButton(cycleMultiplierBackwards())
-    });
+    })
 
     body.on('click', '.clear', function(){
         clearTotal($('#currencyDropDown').val());
@@ -60,11 +58,11 @@ $(function () {
             addDenominations($('#currencyDropDown').val());
         }
         else{
-            addEmptyFormPlaceholder();
+            addEmptyFormPlaceholder()
             clearTotalHard()
         }
         //Clears the total
-        clearTotal($('#currencyDropDown').val());
+        clearTotal($('#currencyDropDown').val())
         clearDenominationTotals($('#currencyDropDown').val())
-    });
+    })
 })
