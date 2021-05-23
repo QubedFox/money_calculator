@@ -2,10 +2,12 @@ const MULTIPLES = ['x1', 'x5', 'x10', 'x25', 'x100']
 var currentSelection = MULTIPLES[0]
 const MAX_INDEX = MULTIPLES.length - 1
 
+//Gets the current multiplier value
 function getMultiplier(){
     return currentSelection.substring(1)
 }
 
+//Cycles through the multiplier values forwards
 function cycleMultiplier(){
     let index = 0
 
@@ -26,6 +28,7 @@ function cycleMultiplier(){
     }
 }
 
+//Cycles through the multiplier values backwards
 function cycleMultiplierBackwards(){
     let index = MAX_INDEX
 

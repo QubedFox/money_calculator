@@ -119,23 +119,29 @@ const currencies = [
     }
 ]
 
+//Gets the list of denominations, returning the front-end value, float value
+//and HTML identifier for classes and IDs
 function getDenominations(currency){
     let index = 0
     let output = [];
 
+    //Finds the correct currency
     while (currencies[index].acronym != currency && index < currencies.length){
         index += 1
     }
 
+    //Copys the denomination info into a new list
     for (i = 0; i < currencies[index].denominations.length; i++){
         output.push(currencies[index].denominations[i])
     }
     return output
 }
 
+//Gets the description of all currencies, i.e. country and acronym
 function getCurrencyDescriptions(){
     let output = []
 
+    //Copies it to a new list
     for (i = 0; i < currencies.length; i++){
         output.push([[currencies[i].country], [currencies[i].acronym]])
     }
@@ -143,9 +149,11 @@ function getCurrencyDescriptions(){
     return output
 }
 
+//Gets the symbol used for a currency
 function getCurrencySymbol(currency){
     let index = 0
 
+    //Finds the correct currency
     while (currencies[index].acronym != currency && index < currencies.length){
         index += 1
     }

@@ -1,4 +1,9 @@
-
+//Add the denomination input group for the user to add values too
+//Input group contains:
+    //Denomination Label
+    //Input Field
+    //Denomination Total
+    //Increase and Decrease Buttons
 function addDenominations(currency){
     let denominations = getDenominations(currency)
     let html = ''
@@ -14,6 +19,8 @@ function addDenominations(currency){
     }
     $('.input-form').html(html);
 }
+
+//Refreshes the denomination totals for each denomination
 function refreshDenominationTotal(currency){
     let denominations = getDenominations(currency)
 
@@ -24,6 +31,7 @@ function refreshDenominationTotal(currency){
     }
 }
 
+//Clears the denomination totals
 function clearDenominationTotals(currency){
     let denominations = getDenominations(currency)
 
@@ -32,10 +40,12 @@ function clearDenominationTotals(currency){
     }
 }
 
+//Edits the denomination total fields
 function editDenominationTotal(target, value) {
     $('.denomination-total-' + target).val(value)
 }
 
+//Refreshes the total at the bottom of the page
 function refreshTotal(currency){
     let total = 0.00;
     let denominations = getDenominations(currency)
@@ -47,6 +57,7 @@ function refreshTotal(currency){
     editTotal(getCurrencySymbol(currency) + total.toFixed(2))
 }
 
+//Clears the total at the bottom of the page
 function clearTotal(currency){
     let denominations = getDenominations(currency)
 
@@ -59,14 +70,18 @@ function clearTotalHard() {
     clearInputFields()
 }
 
+//Clears denomination input fields to be 0
 function clearInputFields(){
     $('.input-field').val(0)
 }
 
+//Edit the total at the bottom of the page
 function editTotal(value){
     $('.total').val(value)
 }
 
+//Increases the count of the nearest input field the
+//increase button was clicked in
 function increaseCount(field){
     let currentCount = $(field).val()
     let modifier = getMultiplier()
@@ -79,6 +94,8 @@ function increaseCount(field){
     }
 }
 
+//Decreases the count of the nearest input field the
+//decrease button was clicked in
 function decreaseCount(field){
     let currentCount = $(field).val()
     let modifier = getMultiplier()
@@ -91,13 +108,14 @@ function decreaseCount(field){
     }
 }
 
+//Edits the text in the multiplier button
 function updateMultiplierButton(multiplier){
     $('.multiplier').text(multiplier)
 }
 
+//Fills the drop down with all the currencies stored in moneyHandler.js
 function fillCurrencyDropDown(){
     let currency_descriptions = getCurrencyDescriptions()
-    console.log(currency_descriptions)
     let html = ''
 
     html += '<option value="None">Select a Currency</option>'
@@ -109,6 +127,7 @@ function fillCurrencyDropDown(){
     $('#currencyDropDown').html(html)
 }
 
+//Checks if there are any denomination input fields on the page
 function isFormEmpty(){
     if ($('.input-form').is(':empty')){
         return true
@@ -118,6 +137,8 @@ function isFormEmpty(){
     }
 }
 
+//Adds place holder text if there are no denomination input fields
+//on the page
 function addEmptyFormPlaceholder(){
     let html = '<p class="text-center lead mt-4 mb-4">Select a currency to begin...</p>'
     $('.input-form').html(html)
