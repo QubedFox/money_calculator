@@ -1,3 +1,9 @@
+//
+//  Code by Nicholas Taplin
+//  GitHub: https://github.com/QubedFox
+//
+
+
 //Add the denomination input group for the user to add values too
 //Input group contains:
     //Denomination Label

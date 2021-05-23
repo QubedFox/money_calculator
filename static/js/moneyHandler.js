@@ -1,3 +1,8 @@
+//
+//  Code by Nicholas Taplin
+//  GitHub: https://github.com/QubedFox
+//
+
 const currencies = [
     AUD = {
         country : 'Australia',

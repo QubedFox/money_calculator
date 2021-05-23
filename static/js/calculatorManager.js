@@ -1,3 +1,9 @@
+//
+//  Code by Nicholas Taplin
+//  GitHub: https://github.com/QubedFox
+//
+
+
 //On the webpage loading up
 window.onload = function() {
     //Fills the currency dropdown menu

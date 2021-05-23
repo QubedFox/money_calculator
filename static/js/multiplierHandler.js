@@ -1,3 +1,9 @@
+//
+//  Code by Nicholas Taplin
+//  GitHub: https://github.com/QubedFox
+//
+
+
 const MULTIPLES = ['x1', 'x5', 'x10', 'x25', 'x100']
 var currentSelection = MULTIPLES[0]
 const MAX_INDEX = MULTIPLES.length - 1
